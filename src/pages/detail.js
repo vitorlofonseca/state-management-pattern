@@ -1,4 +1,5 @@
 import { title } from "../components/title";
+import { stateManager } from "../index";
 
 export const mountDetailPage = () => {
   const rootDiv = document.getElementById("container");
@@ -8,7 +9,7 @@ export const mountDetailPage = () => {
     "Here you can just check the increased counter in the previous screen"
   );
 
-  const counter = title("?");
+  const counter = title(stateManager.state.counter);
 
   bodyContainer.appendChild(pageTitle);
   bodyContainer.appendChild(counter);
